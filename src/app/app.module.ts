@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
+import { DrumListComponent } from './drum-list/drum-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    DrumListComponent
   ],
   imports: [
     BrowserModule,
