@@ -38,7 +38,7 @@ export class DrumListComponent implements OnInit {
       code: "1247-5535679987",
       tracing: true,
       property: "persona",
-      reason: "",
+      reason: "ninguna",
       season: 2020,
       sold: false,
       select:false,
@@ -117,8 +117,8 @@ export class DrumListComponent implements OnInit {
   selectAll(e){
     this.stateCheckbox=e.target.checked;
     this.drums.forEach(drum => {
-        if(!drum.sold)
-        drum.select = e.target.checked;
+      if(!drum.sold)
+      drum.select = e.target.checked;
     });
   }
 
@@ -127,7 +127,7 @@ export class DrumListComponent implements OnInit {
       if(!drum.sold)
       this.drumsDisp++;
   });
-  return this.drumsDisp
+  return this.drumsDisp;
   }
 }
 
