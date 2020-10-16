@@ -57,7 +57,12 @@ export class DrumListComponent implements OnInit {
   }
 
   tracingState(drum){
+    if(!drum.sold && drum.select)
     drum.tracing = !drum.tracing;
+  }
+
+  selectState(drum){
+    drum.select = !drum.select;
   }
 
 }
