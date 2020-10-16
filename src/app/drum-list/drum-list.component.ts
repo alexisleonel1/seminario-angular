@@ -15,32 +15,49 @@ export class DrumListComponent implements OnInit {
       tracing: true,
       property: "persona",
       reason: "",
-      season: 2019,
+      season: 2020,
       sold: false,
+      select:false,
     },
     {
       number: 2,
-      code: "1247-1235675687",
+      code: "1247-4565675687",
       tracing: false,
       property: "persona",
       reason: "",
-      season: 2019,
+      season: 2020,
       sold: true,
+      select:false,
     },
     {
       number: 3,
-      code: "1247-1235675687",
+      code: "1247-5535679987",
       tracing: true,
       property: "persona",
       reason: "",
-      season: 2019,
+      season: 2020,
       sold: false,
+      select:false,
+    },
+    {
+      number: 4,
+      code: "1247-1235565687",
+      tracing: true,
+      property: "persona",
+      reason: "",
+      season: 2020,
+      sold: false,
+      select:false,
     },
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  tracingState(drum){
+    drum.tracing = !drum.tracing;
   }
 
 }

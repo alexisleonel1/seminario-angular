@@ -6,5 +6,6 @@ export interface Drum {
     reason: string;
     season: number;
     sold: boolean;
+    select:boolean;
   } 
   

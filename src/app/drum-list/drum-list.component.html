@@ -8,19 +8,23 @@
           <th>Trazado</th>
           <th>Propiedad</th>
           <th>Razon</th>
+          <th><label class="form-check-label" for="exampleCheck1">Seleccionar</label></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let drum of drums" [ngClass]="{'text-muted': drum.sold}">
           <td>{{drum.number}}</td>
           <td>{{drum.code}}</td>
-          <td>
+          <td (click)="tracingState(drum)" class="tableHover">
             <samp *ngIf="drum.tracing; else elseBlock"><i class="fas fa-check"></i></samp>
             <ng-template #elseBlock><i class="fas fa-times"></i></ng-template>
           </td>
           <td>{{drum.property}}</td>
           <td>{{drum.reason}}</td>
-        </tr>
+          <td>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          </td>
+        </tr> 
       </tbody>
     </table>
   </div>
