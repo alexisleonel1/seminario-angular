@@ -8,6 +8,10 @@ import { Drum } from './drum';
 })
 export class DrumListComponent implements OnInit {
 
+  stateCheckbox: boolean;
+  drumsTotal: number;
+  drumsDisp:number;
+
   drums: Drum[]= [
     {
       number: 1,
@@ -16,7 +20,7 @@ export class DrumListComponent implements OnInit {
       property: "persona",
       reason: "",
       season: 2020,
-      sold: false,
+      sold: true,
       select:false,
     },
     {
@@ -49,11 +53,56 @@ export class DrumListComponent implements OnInit {
       sold: false,
       select:false,
     },
+    {
+      number: 5,
+      code: "1247-1235565687",
+      tracing: true,
+      property: "persona",
+      reason: "",
+      season: 2020,
+      sold: false,
+      select:false,
+    },
+    {
+      number: 6,
+      code: "1247-1235565687",
+      tracing: false,
+      property: "persona",
+      reason: "",
+      season: 2020,
+      sold: false,
+      select:false,
+    },
+    {
+      number: 7,
+      code: "1247-1235565687",
+      tracing: true,
+      property: "persona",
+      reason: "",
+      season: 2020,
+      sold: true,
+      select:false,
+    },
+    {
+      number: 8,
+      code: "1247-1235565687",
+      tracing: false,
+      property: "persona",
+      reason: "",
+      season: 2020,
+      sold: false,
+      select:false,
+    },
   ];
 
-  constructor() { }
+  constructor() {
+    this.stateCheckbox = false;
+    this.drumsTotal = this.drums.length;
+    this.drumsDisp = 0;
+  }
 
   ngOnInit(): void {
+    this.drumsDisp = this.drumsDisp1();
   }
 
   tracingState(drum){
@@ -65,4 +114,20 @@ export class DrumListComponent implements OnInit {
     drum.select = !drum.select;
   }
 
+  selectAll(e){
+    this.stateCheckbox=e.target.checked;
+    this.drums.forEach(drum => {
+        if(!drum.sold)
+        drum.select = e.target.checked;
+    });
+  }
+
+  drumsDisp1(){
+    this.drums.forEach(drum => {
+      if(!drum.sold)
+      this.drumsDisp++;
+  });
+  return this.drumsDisp
+  }
 }
+
