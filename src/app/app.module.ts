@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SelecStringComponent } from './selec-string/selec-string.component';
 import { InputNumbersComponent } from './input-numbers/input-numbers.component';
 import { InputStringsComponent } from './input-strings/input-strings.component';
+import { StatusBooleanComponent } from './status-boolean/status-boolean.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InputStringsComponent } from './input-strings/input-strings.component';
     DrumListComponent,
     SelecStringComponent,
     InputNumbersComponent,
-    InputStringsComponent
+    InputStringsComponent,
+    StatusBooleanComponent
   ],
   imports: [
     BrowserModule,

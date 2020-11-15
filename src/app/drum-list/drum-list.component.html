@@ -28,9 +28,8 @@
         <td>
           <app-input-numbers [(code)] = "drum.code" [select] ="drum.select"></app-input-numbers>
         </td>
-        <td (click)="tracingState(drum)" [ngClass]="{'tableTracing': !drum.sold && drum.select}">
-          <samp *ngIf="drum.tracing; else elseBlock"><i class="fas fa-check"></i></samp>
-          <ng-template #elseBlock><i class="fas fa-times"></i></ng-template>
+        <td [ngClass]="{'tableTracing': !drum.sold && drum.select}">
+          <app-status-boolean [(status)] = "drum.tracing" [select] ="drum.select" [sold]="drum.sold"></app-status-boolean>
         </td>
         <td>
           <app-selec-string [(name)] = "drum.property" [select] ="drum.select"></app-selec-string>

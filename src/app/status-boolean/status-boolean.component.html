@@ -1,0 +1,5 @@
+<div (click)="state()">
+    <samp *ngIf="status; else elseBlock"><i class="fas fa-check"></i></samp>
+    <ng-template #elseBlock><i class="fas fa-times"></i></ng-template>
+</div>
+    
