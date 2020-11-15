@@ -1,0 +1,16 @@
+
+    
+<span *ngIf="!select; else modProperty">
+  {{name}}
+</span>
+
+<ng-template #modProperty>
+  <select [(ngModel)]="name" (click)="emitName()">
+    <option>{{name}}</option>
+    <option>persona2</option>
+    <option>persona3</option>
+  </select>
+</ng-template>
+
+   
+  
