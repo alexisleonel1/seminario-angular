@@ -11,6 +11,7 @@ import { DrumListComponent } from './drum-list/drum-list.component';
 import { FormsModule } from '@angular/forms';
 import { SelecStringComponent } from './selec-string/selec-string.component';
 import { InputNumbersComponent } from './input-numbers/input-numbers.component';
+import { InputStringsComponent } from './input-strings/input-strings.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InputNumbersComponent } from './input-numbers/input-numbers.component';
     SubMenuComponent,
     DrumListComponent,
     SelecStringComponent,
-    InputNumbersComponent
+    InputNumbersComponent,
+    InputStringsComponent
   ],
   imports: [
     BrowserModule,
