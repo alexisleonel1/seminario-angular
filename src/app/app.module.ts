@@ -9,13 +9,17 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { DrumListComponent } from './drum-list/drum-list.component';
 
 import { FormsModule } from '@angular/forms';
+import { SelecStringComponent } from './selec-string/selec-string.component';
+import { InputNumbersComponent } from './input-numbers/input-numbers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     SubMenuComponent,
-    DrumListComponent
+    DrumListComponent,
+    SelecStringComponent,
+    InputNumbersComponent
   ],
   imports: [
     BrowserModule,

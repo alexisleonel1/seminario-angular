@@ -22,30 +22,18 @@
     </thead>
     <tbody>
       <tr *ngFor="let drum of drums" [ngClass]="{'text-primary': drum.select, 'text-muted': drum.sold}">
-        <td>{{drum.number}}</td>
         <td>
-          <span *ngIf="!drum.select; else modCode">
-            {{drum.code}}
-          </span>
-          <ng-template #modCode>
-            <input type="text" size="15" class="imputTransparent" [(ngModel)]="drum.code">
-          </ng-template>
+          {{drum.number}}
+        </td>
+        <td>
+          <app-input-numbers [(code)] = "drum.code" [select] ="drum.select"></app-input-numbers>
         </td>
         <td (click)="tracingState(drum)" [ngClass]="{'tableTracing': !drum.sold && drum.select}">
           <samp *ngIf="drum.tracing; else elseBlock"><i class="fas fa-check"></i></samp>
           <ng-template #elseBlock><i class="fas fa-times"></i></ng-template>
         </td>
         <td>
-          <span *ngIf="!drum.select; else modProperty">
-            {{drum.property}}
-          </span>
-          <ng-template #modProperty>
-            <select class="imputTransparent" [(ngModel)]="drum.property">
-              <option>{{drum.property}}</option>
-              <option>persona2</option>
-              <option>persona3</option>
-            </select>
-          </ng-template>
+          <app-selec-string [(name)] = "drum.property" [select] ="drum.select"></app-selec-string>
         </td>
         <td>
           <samp *ngIf="!drum.select; else modReason">

@@ -122,7 +122,7 @@ export class DrumListComponent implements OnInit {
     });
   }
 
-  drumsDisp1(){
+  drumsDisp1() : number{
     this.drums.forEach(drum => {
       if(!drum.sold)
       this.drumsDisp++;
