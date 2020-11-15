@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Drum } from './drum';
+import { DrumSelectorService } from '../drumSelector.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-drum-list',
@@ -8,11 +10,7 @@ import { Drum } from './drum';
 })
 export class DrumListComponent implements OnInit {
 
-  stateCheckbox: boolean;
-  drumsTotal: number;
-  drumsDisp:number;
-
-  drums: Drum[]= [
+  drums: Drum[] = [
     {
       number: 1,
       code: "1247-1235675687",
@@ -95,35 +93,40 @@ export class DrumListComponent implements OnInit {
     },
   ];
 
-  constructor() {
+  list$: Observable<Drum[]>;
+  stateCheckbox: boolean;
+  drumsTotal: number;
+  drumsDisp:number;
+
+  constructor(private selector: DrumSelectorService){
+    this.list$ = selector.drumList.asObservable();
     this.stateCheckbox = false;
     this.drumsTotal = this.drums.length;
     this.drumsDisp = 0;
-  }
+  } 
 
   ngOnInit(): void {
+    this.addSeleccion();
     this.drumsDisp = this.drumsDisp1();
   }
 
-  
-  selectState(drum){
+  selectState(drum) : void{
     drum.select = !drum.select;
   }
 
-  selectAll(e){
+  selectAll(e) : void{
     this.stateCheckbox=e.target.checked;
-    this.drums.forEach(drum => {
-      if(!drum.sold)
-      drum.select = e.target.checked;
-    });
+    this.selector.select(e);
   }
 
   drumsDisp1() : number{
-    this.drums.forEach(drum => {
-      if(!drum.sold)
-      this.drumsDisp++;
-  });
-  return this.drumsDisp;
+    return this.selector.disp();
+  }
+
+  addSeleccion():void{
+    this.drums.forEach(d => {
+      this.selector.addSeleccion(d);
+    });
   }
 }
 

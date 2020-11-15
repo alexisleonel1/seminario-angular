@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let drum of drums" [ngClass]="{'text-primary': drum.select, 'text-muted': drum.sold}">
+      <tr *ngFor="let drum of (list$ | async)" [ngClass]="{'text-primary': drum.select, 'text-muted': drum.sold}">
         <td>
           {{drum.number}}
         </td>

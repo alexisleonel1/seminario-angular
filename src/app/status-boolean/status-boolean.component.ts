@@ -22,7 +22,6 @@ export class StatusBooleanComponent implements OnInit {
   statusChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit(): void {
-    this.emitStatus();
   }
 
   emitStatus() : void{
@@ -30,8 +29,9 @@ export class StatusBooleanComponent implements OnInit {
   }
 
   state():void{
-      if(!this.sold && this.select)
-      this.status = !this.status;
+    if(!this.sold && this.select)
+    this.status = !this.status;
+    this.emitStatus()
   }
 
 }

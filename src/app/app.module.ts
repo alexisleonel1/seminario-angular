@@ -13,6 +13,7 @@ import { SelecStringComponent } from './selec-string/selec-string.component';
 import { InputNumbersComponent } from './input-numbers/input-numbers.component';
 import { InputStringsComponent } from './input-strings/input-strings.component';
 import { StatusBooleanComponent } from './status-boolean/status-boolean.component';
+import { SelectorComponent } from './selector/selector.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StatusBooleanComponent } from './status-boolean/status-boolean.componen
     SelecStringComponent,
     InputNumbersComponent,
     InputStringsComponent,
-    StatusBooleanComponent
+    StatusBooleanComponent,
+    SelectorComponent
   ],
   imports: [
     BrowserModule,
