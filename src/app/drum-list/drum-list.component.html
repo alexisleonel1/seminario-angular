@@ -38,10 +38,7 @@
           <app-input-strings [(strings)] = "drum.reason" [select] ="drum.select"></app-input-strings>
         </td>
         <td>
-          <input *ngIf="!drum.sold; else elseBlock2" type="checkbox" class="form-check-input" (change)="selectState(drum)" [checked]="stateCheckbox">
-          <ng-template #elseBlock2>
-            <input type="checkbox" class="form-check-input" disabled>
-          </ng-template>
+          <app-check-box-single [(select)] = "drum.select" [diasable] ="drum.sold" [stateCheckbox]="stateCheckbox"></app-check-box-single>
         </td>
       </tr> 
     </tbody>  

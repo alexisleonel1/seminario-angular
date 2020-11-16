@@ -15,6 +15,7 @@ import { InputStringsComponent } from './input-strings/input-strings.component';
 import { StatusBooleanComponent } from './status-boolean/status-boolean.component';
 import { SelectorComponent } from './selector/selector.component';
 import { ButtonVenderComponent } from './button-vender/button-vender.component';
+import { CheckBoxSingleComponent } from './check-box-single/check-box-single.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ButtonVenderComponent } from './button-vender/button-vender.component';
     InputStringsComponent,
     StatusBooleanComponent,
     SelectorComponent,
-    ButtonVenderComponent
+    ButtonVenderComponent,
+    CheckBoxSingleComponent
   ],
   imports: [
     BrowserModule,

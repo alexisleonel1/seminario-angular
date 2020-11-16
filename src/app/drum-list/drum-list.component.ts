@@ -110,10 +110,6 @@ export class DrumListComponent implements OnInit {
     this.drumsDisp = this.drumsDisp1();
   }
 
-  selectState(drum) : void{
-    drum.select = !drum.select;
-  }
-
   selectAll(e) : void{
     this.stateCheckbox=e.target.checked;
     this.selector.select(e);
