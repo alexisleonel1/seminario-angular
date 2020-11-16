@@ -16,7 +16,7 @@
         <th>Razon</th>
         <th>
           Seleccionar
-          <input type="checkbox" class="form-check-input ml-2" (change)="selectAll($event)">
+          <app-check-box-all (stateChange) = "stateChange($event)"></app-check-box-all>
         </th>
       </tr>
     </thead>

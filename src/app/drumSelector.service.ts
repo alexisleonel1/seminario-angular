@@ -16,7 +16,7 @@ export class DrumSelectorService {
   select(e): void{
     this._drumList.forEach(drum => {
       if(!drum.sold)
-      drum.select = e.target.checked;
+      drum.select = e;
     });
   }
 

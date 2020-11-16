@@ -94,13 +94,13 @@ export class DrumListComponent implements OnInit {
   ];
 
   list$: Observable<Drum[]>;
-  stateCheckbox: boolean;
   drumsTotal: number;
   drumsDisp:number;
+  stateCheckbox: boolean;
 
   constructor(private selector: DrumSelectorService){
     this.list$ = selector.drumList.asObservable();
-    this.stateCheckbox = false;
+    this.stateCheckbox = null;
     this.drumsTotal = this.drums.length;
     this.drumsDisp = 0;
   } 
@@ -108,11 +108,6 @@ export class DrumListComponent implements OnInit {
   ngOnInit(): void {
     this.addSeleccion();
     this.drumsDisp = this.drumsDisp1();
-  }
-
-  selectAll(e) : void{
-    this.stateCheckbox=e.target.checked;
-    this.selector.select(e);
   }
 
   drumsDisp1() : number{
@@ -123,6 +118,11 @@ export class DrumListComponent implements OnInit {
     this.drums.forEach(d => {
       this.selector.addSeleccion(d);
     });
+  }
+
+  stateChange(e: boolean): void{
+    this.selector.select(e);
+    this.stateCheckbox = e;
   }
 }
 

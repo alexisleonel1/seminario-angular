@@ -16,6 +16,7 @@ import { StatusBooleanComponent } from './status-boolean/status-boolean.componen
 import { SelectorComponent } from './selector/selector.component';
 import { ButtonVenderComponent } from './button-vender/button-vender.component';
 import { CheckBoxSingleComponent } from './check-box-single/check-box-single.component';
+import { CheckBoxAllComponent } from './check-box-all/check-box-all.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CheckBoxSingleComponent } from './check-box-single/check-box-single.com
     StatusBooleanComponent,
     SelectorComponent,
     ButtonVenderComponent,
-    CheckBoxSingleComponent
+    CheckBoxSingleComponent,
+    CheckBoxAllComponent
   ],
   imports: [
     BrowserModule,
