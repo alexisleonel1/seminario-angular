@@ -5,7 +5,7 @@
             <li class="list-group-item" *ngIf="item.select">
                 {{item.number}}. Propiedad: {{item.property}} | 
                 Trazado: <app-status-boolean [(status)] = "item.tracing" [select] ="false" [sold]="item.sold"></app-status-boolean>
-               | Vender {{item.sold}} 
+               |<app-button-vender [(sold)]="item.sold" [(select)] = "item.select"></app-button-vender>
             </li>
         </div>
     </ul>

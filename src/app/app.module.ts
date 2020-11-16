@@ -14,6 +14,7 @@ import { InputNumbersComponent } from './input-numbers/input-numbers.component';
 import { InputStringsComponent } from './input-strings/input-strings.component';
 import { StatusBooleanComponent } from './status-boolean/status-boolean.component';
 import { SelectorComponent } from './selector/selector.component';
+import { ButtonVenderComponent } from './button-vender/button-vender.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SelectorComponent } from './selector/selector.component';
     InputNumbersComponent,
     InputStringsComponent,
     StatusBooleanComponent,
-    SelectorComponent
+    SelectorComponent,
+    ButtonVenderComponent
   ],
   imports: [
     BrowserModule,
