@@ -7,31 +7,33 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class StatusBooleanComponent implements OnInit {
 
-  constructor() { }
-
   @Input()
-  status: boolean;
+  disable: boolean;
 
   @Input()
   select: boolean;
 
   @Input()
-  sold: boolean;
+  state: boolean;
 
   @Output()
-  statusChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor() { 
+    this.select = false;
+  }
 
   ngOnInit(): void {
   }
 
-  emitStatus() : void{
-    this.statusChange.emit(this.status);
+  private emitState() : void{
+    this.stateChange.emit(this.state);
   }
 
-  state():void{
-    if(!this.sold && this.select)
-    this.status = !this.status;
-    this.emitStatus()
+  changeState():void{
+    if(!this.disable && this.select)
+    this.state = !this.state;
+    this.emitState()
   }
 
 }

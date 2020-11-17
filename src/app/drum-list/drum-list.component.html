@@ -16,7 +16,7 @@
         <th>Razon</th>
         <th>
           Seleccionar
-          <app-check-box (stateChange) = "stateChange($event)"></app-check-box>
+          <app-check-box class="ml-4" (stateChange) = "stateChange($event)"></app-check-box>
         </th>
       </tr>
     </thead>
@@ -29,7 +29,7 @@
           <app-input-numbers [(code)] = "drum.code" [select] ="drum.select"></app-input-numbers>
         </td>
         <td [ngClass]="{'tableTracing': !drum.sold && drum.select}">
-          <app-status-boolean [(status)] = "drum.tracing" [select] ="drum.select" [sold]="drum.sold"></app-status-boolean>
+          <app-status-boolean [(state)] = "drum.tracing" [select] ="drum.select" [disable]="drum.sold"></app-status-boolean>
         </td>
         <td>
           <app-selec-string [(name)] = "drum.property" [select] ="drum.select"></app-selec-string>
@@ -38,7 +38,7 @@
           <app-input-strings [(strings)] = "drum.reason" [select] ="drum.select"></app-input-strings>
         </td>
         <td>
-          <app-check-box [(state)] = "drum.select" [diasable] ="drum.sold"></app-check-box>
+          <app-check-box [(state)] = "drum.select" [disable] = "drum.sold"></app-check-box>
         </td>
       </tr> 
     </tbody>  

@@ -8,7 +8,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class CheckBoxComponent implements OnInit {
 
   @Input()
-  diasable: boolean;
+  disable: boolean;
 
   @Input()
   state: boolean;

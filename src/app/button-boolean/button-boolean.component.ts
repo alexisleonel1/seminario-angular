@@ -8,25 +8,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ButtonBooleanComponent implements OnInit {
 
   @Input()
-  sold: boolean;
+  state: boolean;
+
+  @Output()
+  stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   @Input()
-  select: boolean;
+  var: boolean;
 
   @Output()
-  soldChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  @Output()
-  selectChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  varChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-  }
-
-  emitSold(): void{
-    this.selectChange.emit(false);
-    this.soldChange.emit(true);
+  emitState(): void{
+    this.stateChange.emit(false);
+    this.varChange.emit(true);
   }
 }

@@ -4,8 +4,8 @@
         <div *ngFor="let item of (list$ | async)">
             <li class="list-group-item" *ngIf="item.select">
                 {{item.number}}. Propiedad: {{item.property}} | 
-                Trazado: <app-status-boolean [(status)] = "item.tracing" [select] ="false" [sold]="item.sold"></app-status-boolean>
-               |<app-button-boolean [(sold)]="item.sold" [(select)] = "item.select"></app-button-boolean>
+                Trazado: <app-status-boolean [(state)] = "item.tracing" [disable]="item.sold"></app-status-boolean>
+               |<app-button-boolean [(var)]="item.sold" [(state)] = "item.select"></app-button-boolean>
             </li>
         </div>
     </ul>
