@@ -16,7 +16,7 @@
         <th>Razon</th>
         <th>
           Seleccionar
-          <app-check-box-all (stateChange) = "stateChange($event)"></app-check-box-all>
+          <app-check-box (stateChange) = "stateChange($event)"></app-check-box>
         </th>
       </tr>
     </thead>
@@ -38,7 +38,7 @@
           <app-input-strings [(strings)] = "drum.reason" [select] ="drum.select"></app-input-strings>
         </td>
         <td>
-          <app-check-box-single [(select)] = "drum.select" [diasable] ="drum.sold" [stateCheckbox]="stateCheckbox"></app-check-box-single>
+          <app-check-box [(state)] = "drum.select" [diasable] ="drum.sold" [stateCheckbox]="stateCheckbox"></app-check-box>
         </td>
       </tr> 
     </tbody>  
