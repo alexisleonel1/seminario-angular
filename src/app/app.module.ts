@@ -14,8 +14,9 @@ import { InputNumbersComponent } from './input-numbers/input-numbers.component';
 import { InputStringsComponent } from './input-strings/input-strings.component';
 import { StatusBooleanComponent } from './status-boolean/status-boolean.component';
 import { SelectorComponent } from './selector/selector.component';
-import { ButtonVenderComponent } from './button-vender/button-vender.component';
+import { ButtonBooleanComponent } from './button-boolean/button-boolean.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
+import { HibernationComponent } from './hibernation/hibernation.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,9 @@ import { CheckBoxComponent } from './check-box/check-box.component';
     InputStringsComponent,
     StatusBooleanComponent,
     SelectorComponent,
-    ButtonVenderComponent,
-    CheckBoxComponent
+    ButtonBooleanComponent,
+    CheckBoxComponent,
+    HibernationComponent
   ],
   imports: [
     BrowserModule,

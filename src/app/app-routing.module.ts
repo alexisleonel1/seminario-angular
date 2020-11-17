@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HibernationComponent } from './hibernation/hibernation.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'panel-general',
     component: DashboardComponent
+  },
+  {
+    path: 'panel-invernada',
+    component: HibernationComponent
   },
 ];
 

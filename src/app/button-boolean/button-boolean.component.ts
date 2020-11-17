@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-button-vender',
-  templateUrl: './button-vender.component.html',
-  styleUrls: ['./button-vender.component.scss']
+  selector: 'app-button-boolean',
+  templateUrl: './button-boolean.component.html',
+  styleUrls: ['./button-boolean.component.scss']
 })
-export class ButtonVenderComponent implements OnInit {
+export class ButtonBooleanComponent implements OnInit {
 
   @Input()
   sold: boolean;
