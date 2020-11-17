@@ -1,4 +1,4 @@
-<input *ngIf="!diasable; else elseBlock2" type="checkbox" class="form-check-input" (change)="selectState($event)" [checked]="stateCheckbox">
+<input *ngIf="!diasable; else elseBlock2" type="checkbox" class="form-check-input" (change)="selectState($event)" [checked]="state">
 <ng-template #elseBlock2>
 <input type="checkbox" class="form-check-input" disabled>
 </ng-template>

@@ -96,11 +96,9 @@ export class DrumListComponent implements OnInit {
   list$: Observable<Drum[]>;
   drumsTotal: number;
   drumsDisp:number;
-  stateCheckbox: boolean;
 
   constructor(private selector: DrumSelectorService){
     this.list$ = selector.drumList.asObservable();
-    this.stateCheckbox = null;
     this.drumsTotal = this.drums.length;
     this.drumsDisp = 0;
   } 
@@ -122,7 +120,6 @@ export class DrumListComponent implements OnInit {
 
   stateChange(e: boolean): void{
     this.selector.select(e);
-    this.stateCheckbox = e;
   }
 }
 

@@ -8,9 +8,6 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class CheckBoxComponent implements OnInit {
 
   @Input()
-  stateCheckbox: boolean;
-
-  @Input()
   diasable: boolean;
 
   @Input()
